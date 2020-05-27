@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #333;
+}
+a {
+    text-decoration: none;
+}
+.box {
+    width: 1000px;
+    height: 220px;
+    margin: 50px auto;
+}
+.box .link {
+    float: left;
+    margin: 0 20px;
+    width: 205px;
+    height: 280px;
+    position: relative;
+}
+.box .icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 100%;
+    height: 190px;
+    transition: 0.2s linear; /**线性改变 */
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+}
+.link-miss .icon {
+    background-image: url("./img1.png");
+}
+.link-play .icon {
+    background-image: url("./img2.png");  
+}
+.link-touch .icon {
+    background-image: url("./img3.png"); 
+}
+.box .link .icon:hover {
+    transform: rotate(360deg) scale(1.2); /**旋转放大**/
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+    -o-transform: rotate(360deg) scale(1.2);
+}
+.box .link .button {
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: 2px solid rgba(255, 255,255, 0.8);
+    line-height: 50px;
+    color: #2dcb70;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 20px;
+    box-sizing: border-box; /**避免盒子被padding撑开*/
+    margin: auto; /*实现盒子居中**/
+    background: url("./arrow.png") no-repeat 120px center;
+    background-size: 20% 20%;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    position: relative; /** 为了让小方块相对定位***/
+}
+.box .link .button:hover {
+    background-position: 130px center;
+    border-color: rgba(255, 255, 255, 1);
+}
+.box .link .button .line {
+    position: absolute;
+    display: block;
+    background: none;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+.box .link .button:hover .line-top {
+    width: 180px;
+    background-color: #fff;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+}
+.box .link .button .line-top {
+    left: -100%;
+    top: -2px;
+    width: 0;
+    height: 2px;
+}
+.box .link .button:hover .line-left {
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+}
+.box .link .button .line-left {
+    bottom: -100%;
+    left: -2px;
+    width: 2px;
+    height: 0;
+}
+.box .link .button:hover .line-right {
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
+.box .link .button .line-right {
+    right: -2px;
+    top: -100%;
+    width: 2px;
+    height: 0;
+}
+.box .link .button:hover .line-bottom {
+    width: 180px;
+    background-color: #fff;
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+}
+.box .link .button .line-bottom {
+    right: -100%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+}
+/* 提示框css start */
+.box .tooltip {
+    position: absolute;
+    padding: 0 15px;
+    height: 35px;
+    background-color: #2dcb70;
+    border-radius: 5px;
+    line-height: 35px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 0;
+}
+.box .tooltip span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-top-color: #2dcb70;
+    left: 50%;
+    margin-left: -4px;
+    bottom: -16px;
+}

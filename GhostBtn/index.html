@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幽灵按钮的实现</title>
+    <link rel="stylesheet" href="./common.css">
+</head>
+<body>
+    <div class="box">
+        <div class="link link-miss">
+            <span class="icon"></span>
+            <a href="#" class="button"  data-text="My mission is clear">
+                <span class="line line-left"></span>
+                <span class="line line-right"></span>
+                <span class="line line-top"></span>
+                <span class="line line-bottom"></span>
+                Mission
+            </a>
+        </div>
+        <div class="link link-play">
+            <span class="icon"></span>
+            <a href="#" class="button"  data-text="this is my play">
+                <span class="line line-left"></span>
+                <span class="line line-right"></span>
+                <span class="line line-top"></span>
+                <span class="line line-bottom"></span>
+                Play
+            </a>
+        </div>
+        <div class="link link-touch">
+            <span class="icon"></span>
+            <a href="#" class="button" data-text="let do it">
+                <span class="line line-left"></span>
+                <span class="line line-right"></span>
+                <span class="line line-top"></span>
+                <span class="line line-bottom"></span>
+                Touch
+            </a>
+        </div>
+        <div class="tooltip">
+            <em>fasbui1ui</em>
+            <span></span>
+        </div>
+    </div>
+</body>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<script>
+    $(function() {
+        $('.button').hover(function() {
+            let titleText = $(this).attr('data-text');
+            $(".tooltip em").text(titleText); // 动态获取提示内容
+            let leftLoc = $(this).offset().left;
+            let addLeft = ($('.tooltip').outerWidth() - $(this).outerWidth()) /2;
+            $('.tooltip').css({
+                left: leftLoc - addLeft,
+                top: 140
+            }).animate({
+                top: 195,
+                opacity: 1
+            }, 300)
+        }, function() {
+
+        })
+    })
+</script>
+</html>
