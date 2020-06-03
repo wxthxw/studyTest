@@ -1,0 +1,187 @@
+@charset "utf-8";
+// reset css
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+// model css
+.sn_layout { // 主体容器
+    width: 100%;
+    max-width: 750px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-top: 90rem/@baseSize;
+    .sn_search { // 头部搜索
+        width: 100%;
+        height: 90rem/@baseSize;
+        background-color: @snColor;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        a {
+            width: 90rem/@baseSize;
+            height: 90rem/@baseSize;
+            position: absolute;
+            top: 0;
+            &.icon_category {
+                left: 0;
+                background: url('../images/btn/category.png') no-repeat center;
+                background-size: 44/@bs 70/@bs;
+            }
+            &.icon_cart {
+                right: 0;
+                background: url('../images/btn/login.png') no-repeat center / 44/@bs 70/@bs;
+            }
+        }
+        form {
+            padding: 0 90rem/@baseSize;
+            width: 100%;
+            .icon_search {
+                width: 30/@bs;
+                height: 30/@bs;
+                position: absolute;
+                left: 1rem;
+                top: 30/@bs;
+                background: url('../images/btn/search.png') no-repeat center / 27/@bs 28/@bs;
+            }
+            input {
+                color: #999;
+                width: 100%;
+                padding-left: 50/@bs;
+                margin-top: 15/@bs;
+                border-radius: 10px;
+                height: 60/@bs;
+                outline: none;
+                border: none;
+                background-color: rgba(255, 255, 255, 0.6);
+                font-size: 24/@bs;
+            }
+        }
+    }
+    .sn_banner {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        ul {
+            list-style: none;
+            &:first-child {
+                width: 10*100%;
+                li {
+                    width: 100%/10;
+                    float: left;
+                    a {
+                        display: block;
+                        width: 100%;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                position: absolute;
+                right: 20/@bs;
+                bottom: 20/@bs;
+                li {
+                    width: 10/@bs;
+                    height: 10/@bs;
+                    border-radius: 100%;
+                    background-color: #fff;
+                    float: left;
+                    margin-left: 10/@bs;
+                    &.now {
+                        background-color: @snColor;
+                    }
+                }
+            }
+        }
+    }
+    .sn_nav {
+        width: 100%;
+        ul {
+            width: 100%;
+            padding: 20/@bs 0;
+            li {
+                width: 20%;
+                list-style: none;
+                float: left;
+                a {
+                    display: block;
+                    width: 100%;
+                    text-decoration: none;
+                    img {
+                        display: block;
+                        width: 80/@bs;
+                        height: 80/@bs;
+                        margin: 0 auto;
+                    }
+                    p {
+                        font-size: 20/@bs;
+                        padding: 12/@bs 0;
+                        text-align: center;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+    .sn_tabs {
+        width: 100%;
+        height: 90rem/@baseSize;
+        background-color: #ddd;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 9999;
+        ul {
+            width: 100%;
+            padding: 20/@bs 0;
+            li {
+                width: 20%;
+                list-style: none;
+                float: left;
+                a {
+                    display: block;
+                    width: 100%;
+                    text-decoration: none;
+                    img {
+                        display: block;
+                        width: 40/@bs;
+                        height: 40/@bs;
+                        margin: 0 auto;
+                    }
+                    p {
+                        font-size: 15/@bs;
+                        padding: 6/@bs 0;
+                        text-align: center;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+}
