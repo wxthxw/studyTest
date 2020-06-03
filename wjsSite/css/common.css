@@ -1,0 +1,12 @@
+/* common css 公用的样式 */
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+a {
+    color: #666;
+}
+a:hover {
+    color: #666;
+    text-decoration: none;
+}
