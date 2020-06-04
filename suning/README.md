@@ -36,3 +36,23 @@
 rem适配：rem单位用在内容的高度自适应
 
 ### 使用zepto完成轮播图
+<!-- zepto 的核心功能 -->
+<script src="./js/lib/zepto.min.js"></script>
+<!-- zepto selector 模块  -->
+<script src="./js/lib/zepto.selector.js"></script>
+<!-- zepto 使用动画 -->
+<script src="./js/lib/zepto.fx.js"></script>
+<!-- zepto touch 手势事件 -->
+<script src="./js/lib/zepto.touch.js"></script>
+
+### 使用Swiper实现轮播图
++ 引入时注意版本的问题：
+<script src="./swiper-3.4.2.min.js"></script>
+
++ 初始化
+new Swiper('.swiper-container', {
+    autoplay: 1000, // 自动播放
+    loop: true, // 无缝滑动
+    pagination: '.swiper-pagination', // 显示指示器
+    autoplayDisableOnInteraction: false // 用户滑动后继续播放
+});

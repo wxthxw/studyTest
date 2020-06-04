@@ -6,6 +6,7 @@
     <title>SuNing-index</title>
     <link rel="stylesheet" type="text/less" href="./assets/less/main.less" />
     <script src="./js/lib/less.min.js" ></script>
+    <link rel="stylesheet" href="./js/lib/swiper/css/swiper.min.css">
 </head>
 <body>
     <!-- 主体容器 start -->
@@ -23,14 +24,13 @@
         <!-- 轮播图 start -->
         <div class="sn_banner">
             <ul>
-                <li><a href="#"><img src="./assets/images/banner/1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/banner/6.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./assets/images/banner/1.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./assets/images/banner/2.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./assets/images/banner/3.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./assets/images/banner/4.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./assets/images/banner/5.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./assets/images/banner/6.jpg" alt=""></a></li>
-                <li><a href="#"><img src="./assets/images/banner/1.jpg" alt=""></a></li>
             </ul>
             <ul>
                 <li class="now"></li>
@@ -108,6 +108,24 @@
             </ul>
         </nav>
         <!-- 导航 end -->
+        <!-- swiper 轮播 start -->
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><a href="#"><img src="./assets/images/goods/1.jpg" alt=""></a></li>
+                <li class="swiper-slide"><a href="#"><img src="./assets/images/goods/2.jpg" alt=""></a></li>
+                <li class="swiper-slide"><a href="#"><img src="./assets/images/goods/3.jpg" alt=""></a></li>
+                <li class="swiper-slide"><a href="#"><img src="./assets/images/goods/4.jpg" alt=""></a></li>
+            </ul>
+            <ul class="swiper-pagination">
+                <li class="now"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- swiper 轮播 end -->
         <!-- 底部页签 start -->
         <footer class="sn_tabs">
             <ul>
@@ -147,5 +165,15 @@
     </div>
     <!-- 主体容器 end -->
 </body>
+<!-- zepto 的核心功能 -->
+<script src="./js/lib/zepto.min.js"></script>
+<!-- zepto selector 模块  -->
+<script src="./js/lib/zepto.selector.js"></script>
+<!-- zepto 使用动画 -->
+<script src="./js/lib/zepto.fx.js"></script>
+<!-- zepto touch 手势事件 -->
+<script src="./js/lib/zepto.touch.js"></script>
+<!-- 引入 swiper -->
+<script src="./swiper-3.4.2.min.js"></script>
 <script src="./js/index.js"></script>
 </html>

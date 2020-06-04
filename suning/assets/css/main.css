@@ -9,6 +9,36 @@
     font-size: 48px;
   }
 }
+@media (min-width: 380px) {
+  html {
+    font-size: 50.66666667px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}
+@media (min-width: 420px) {
+  html {
+    font-size: 56px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 132.26666667px;
+  }
+}
+@media (min-width: 1000px) {
+  html {
+    font-size: 133.33333333px;
+  }
+}
 *,
 ::before,
 ::after {
@@ -21,10 +51,185 @@ body {
   font-size: 14px;
   font-family: 'Microsoft YaHei', sans-serif;
 }
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
 .sn_layout {
   width: 100%;
   max-width: 750px;
   min-width: 320px;
   margin: 0 auto;
-  background-color: red;
+  padding-top: 0.9rem;
+}
+.sn_layout .sn_search {
+  width: 100%;
+  height: 0.9rem;
+  background-color: #fabc09;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+.sn_layout .sn_search a {
+  width: 0.9rem;
+  height: 0.9rem;
+  position: absolute;
+  top: 0;
+}
+.sn_layout .sn_search a.icon_category {
+  left: 0;
+  background: url('../images/btn/category.png') no-repeat center;
+  background-size: 0.44rem 0.7rem;
+}
+.sn_layout .sn_search a.icon_cart {
+  right: 0;
+  background: url('../images/btn/login.png') no-repeat center / 0.44rem 0.7rem;
+}
+.sn_layout .sn_search form {
+  padding: 0 0.9rem;
+  width: 100%;
+}
+.sn_layout .sn_search form .icon_search {
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  left: 1rem;
+  top: 0.3rem;
+  background: url('../images/btn/search.png') no-repeat center / 0.27rem 0.28rem;
+}
+.sn_layout .sn_search form input {
+  color: #999;
+  width: 100%;
+  padding-left: 0.5rem;
+  margin-top: 0.15rem;
+  border-radius: 10px;
+  height: 0.6rem;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 0.24rem;
+}
+.sn_layout .sn_banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.sn_layout .sn_banner ul {
+  list-style: none;
+  transform: translateX(-10%);
+  -webkit-transform: translateX(-10%);
+}
+.sn_layout .sn_banner ul:first-child {
+  width: 1000%;
+}
+.sn_layout .sn_banner ul:first-child li {
+  width: 10%;
+  float: left;
+}
+.sn_layout .sn_banner ul:first-child li a {
+  display: block;
+  width: 100%;
+}
+.sn_layout .sn_banner ul:first-child li a img {
+  display: block;
+  width: 100%;
+}
+.sn_layout .sn_banner ul:last-child {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.2rem;
+}
+.sn_layout .sn_banner ul:last-child li {
+  width: 0.1rem;
+  height: 0.1rem;
+  border-radius: 100%;
+  background-color: #fff;
+  float: left;
+  margin-left: 0.1rem;
+}
+.sn_layout .sn_banner ul:last-child li.now {
+  background-color: #fabc09;
+}
+.sn_layout .sn_nav {
+  width: 100%;
+  margin-bottom: 0.9rem;
+}
+.sn_layout .sn_nav ul {
+  width: 100%;
+  padding: 0.2rem 0;
+}
+.sn_layout .sn_nav ul li {
+  width: 20%;
+  list-style: none;
+  float: left;
+}
+.sn_layout .sn_nav ul li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+.sn_layout .sn_nav ul li a img {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0 auto;
+}
+.sn_layout .sn_nav ul li a p {
+  font-size: 0.2rem;
+  padding: 0.12rem 0;
+  text-align: center;
+  color: #666;
+}
+.sn_layout .sn_tabs {
+  width: 100%;
+  height: 0.9rem;
+  background-color: #ddd;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.sn_layout .sn_tabs ul {
+  width: 100%;
+  padding: 0.2rem 0;
+}
+.sn_layout .sn_tabs ul li {
+  width: 20%;
+  list-style: none;
+  float: left;
+}
+.sn_layout .sn_tabs ul li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+.sn_layout .sn_tabs ul li a img {
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0 auto;
+}
+.sn_layout .sn_tabs ul li a p {
+  font-size: 0.15rem;
+  padding: 0.06rem 0;
+  text-align: center;
+  color: #666;
+}
+.swiper-container {
+  width: 100%;
+}
+.swiper-container ul {
+  list-style: none;
 }
